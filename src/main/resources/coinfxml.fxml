@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mati.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <ButtonBar buttonMinWidth="145.0" layoutX="6.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="501.0" AnchorPane.leftAnchor="6.0">
+               <buttons>
+                  <Button fx:id="button_settings" mnemonicParsing="false" onAction="#handle_button_settings" prefHeight="35.0" text="Settings" />
+                  <Button fx:id="button_refresh" minWidth="57.0" mnemonicParsing="false" onAction="#handle_button_refresh" prefHeight="35.0" text="Refresh" />
+               </buttons>
+            </ButtonBar>
+            <TabPane layoutX="6.0" layoutY="49.0" prefHeight="543.0" prefWidth="787.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Cryptocurrencies">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableview1" layoutX="134.0" layoutY="70.0" prefHeight="281.0" prefWidth="371.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="82.0" text="Symbol" />
+                                  <TableColumn prefWidth="106.0" text="Name" />
+                                    <TableColumn prefWidth="140.0" text="Price" />
+                                    <TableColumn prefWidth="132.0" text="Market Cap" />
+                                    <TableColumn prefWidth="140.0" text="Volume" />
+                                    <TableColumn prefWidth="84.0" text="Change (24h)" />
+                                    <TableColumn prefWidth="90.0" text="Action" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="My portfolio">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableview111" layoutX="134.0" layoutY="70.0" prefHeight="281.0" prefWidth="371.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn prefWidth="82.0" text="Symbol" />
+                                    <TableColumn prefWidth="106.0" text="Name" />
+                                    <TableColumn prefWidth="140.0" text="Price" />
+                                    <TableColumn prefWidth="132.0" text="Market Cap" />
+                                    <TableColumn prefWidth="140.0" text="Volume" />
+                                    <TableColumn prefWidth="84.0" text="Change (24h)" />
+                                    <TableColumn prefWidth="90.0" text="Action" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label layoutX="380.0" layoutY="6.0" opacity="0.59" text="Open Source cryptocurrency portfolio tracker">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
